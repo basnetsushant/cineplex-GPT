@@ -34,20 +34,25 @@ _to be added_
 
 Follow these steps to run the project locally:
 
-1. **Clone the repo**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/basnetsushant/cineplex-GPT.git
-   cd cineplex-GPT
    ```
 
-2. **Install dependencies**
+2. Navigate into the project directory:
+
+```bash
+cd cineplex-GPT
+```
+
+3. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Add environment variables**  
+4. **Add environment variables**  
    Create a `.env` file in the root and add your keys:
 
    ```bash
@@ -56,7 +61,7 @@ Follow these steps to run the project locally:
     VITE_TMDB_API_KEY=your_tmdb_api_key
    ```
 
-4. **Run the app**
+5. **Run the app**
    ```bash
    npm run dev
    ```
