@@ -1,16 +1,37 @@
+import { ValidateData } from "../utils/validate";
 import Header from "./Header";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const [errorMessage, setErrorMessage] = useState();
+
+  const email = useRef(null);
+  const password = useRef(null);
+  const firstName = useRef(null);
+  const lastName = useRef(null);
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
 
+  const handleButtonClick = () => {
+    let message;
+    if (isSignInForm) {
+      message = ValidateData(email.current.value, password.current.value);
+    } else {
+      message = ValidateData(
+        email.current.value,
+        password.current.value,
+        firstName.current.value,
+        lastName.current.value
+      );
+    }
+    setErrorMessage(message);
+  };
+
   return (
     <div className="relative h-screen w-screen bg-black">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           className="h-full w-full object-cover opacity-40"
@@ -19,7 +40,6 @@ const Login = () => {
         />
       </div>
 
-      {/* Header */}
       <Header />
 
       <form
@@ -33,11 +53,13 @@ const Login = () => {
         {!isSignInForm && (
           <>
             <input
+              ref={firstName}
               type="text"
               placeholder="First Name"
               className="p-3 my-2 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <input
+              ref={lastName}
               type="text"
               placeholder="Last Name"
               className="p-3 my-2 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -46,17 +68,20 @@ const Login = () => {
         )}
 
         <input
+          ref={email}
           type="email"
           placeholder="Email Address"
           className="p-3 my-2 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
         />
         <input
+          ref={password}
           type="password"
           placeholder="Password"
           className="p-3 my-2 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
         />
-
+        <p className="text-red-500 mx-2 py-2">{errorMessage}</p>
         <button
+          onClick={handleButtonClick}
           type="submit"
           className="p-3 my-4 bg-red-600 hover:bg-red-700 rounded font-semibold cursor-pointer"
         >
