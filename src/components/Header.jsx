@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { AVATAR, LOGO } from "../utils/constants";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const dispatch = useDispatch();
