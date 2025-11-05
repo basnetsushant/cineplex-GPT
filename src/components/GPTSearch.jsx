@@ -1,21 +1,23 @@
 import GptSearchBar from "./GPTsearchBar";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
+import { BG_URL } from "../utils/constants";
 
 const GPTsearch = () => {
   return (
-    <>
-      <div className="fixed -z-10">
+    <div className="relative w-screen h-screen text-white">
+      <div className="absolute inset-0 -z-10">
         <img
-          className="w-screen h-screen object-cover"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/f6e7f6df-6973-46ef-b98f-12560d2b3c69/web/IN-en-20250317-TRIFECTA-perspective_26f87873-6014-460d-a6fb-1d96d85ffe5f_small.jpg"
-          alt="logo"
+          className="w-full h-full object-cover"
+          src={BG_URL}
+          alt="Background"
         />
       </div>
-      <div className="">
+
+      <div className="flex flex-col items-center justify-center h-full">
         <GptSearchBar />
         <GPTMovieSuggestions />
       </div>
-    </>
+    </div>
   );
 };
 
