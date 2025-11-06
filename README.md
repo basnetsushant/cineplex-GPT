@@ -33,9 +33,9 @@ Follow these steps to run the project locally:
 
 2. Navigate into the project directory:
 
-```bash
-cd cineplex-GPT
-```
+   ```bash
+   cd cineplex-GPT
+   ```
 
 3. **Install dependencies**
 
