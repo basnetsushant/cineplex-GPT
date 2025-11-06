@@ -54,9 +54,15 @@ const Header = () => {
   return (
     <div className="absolute w-full flex items-center justify-between px-8 py-4 bg-gradient-to-b from-black z-10">
       <img
-        className="w-36"
+        className="w-36 cursor-pointer"
         src={LOGO}
         alt="Netflix Logo"
+        onClick={() => {
+          if (showGptSearch) {
+            dispatch(toggleGPTSearchView());
+          }
+          navigate("/browse");
+        }}
       />
 
       {user && (

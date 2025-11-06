@@ -1,24 +1,19 @@
-import GptSearchBar from "./GPTsearchBar";
+// components/GPTSearch.jsx
+
+import React from "react";
+import GPTSearchBar from "./GPTSearchBar";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import { BG_URL } from "../utils/constants";
 
-const GPTsearch = () => {
+const GPTSearch = () => {
   return (
-    <div className="relative w-screen h-screen text-white">
-      <div className="absolute inset-0 -z-10">
-        <img
-          className="w-full h-full object-cover"
-          src={BG_URL}
-          alt="Background"
-        />
-      </div>
-
-      <div className="flex flex-col items-center justify-center h-full">
-        <GptSearchBar />
-        <GPTMovieSuggestions />
-      </div>
+    <div className="relative w-full min-h-screen">
+      {/* <div className="pt-[100px] md:pt-[150px]"> */}
+      <GPTSearchBar />
+      <GPTMovieSuggestions />
+      {/* </div> */}
     </div>
   );
 };
 
-export default GPTsearch;
+export default GPTSearch;
