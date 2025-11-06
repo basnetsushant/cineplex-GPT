@@ -1,32 +1,23 @@
 # Cineplex-GPT 🎬🍿
 
-[Cineplex-GPT](https://github.com/basnetsushant/cineplex-GPT) is a Netflix-inspired, AI-driven movie app built with **React**, **Redux**, **Tailwind CSS**, and **Firebase**. It offers a seamless browsing experience with **GPT-powered recommendations** and **smart search** for movies and TV shows.
+**Cineplex-GPT** is a Netflix-inspired web app powered by Google’s Gemini AI for smart movie recommendations. Built with React, Redux, and Tailwind CSS, it provides a dynamic, responsive interface where users can browse popular movies or search films using descriptive prompts.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **User Authentication** – Secure sign-up and login with Firebase
-- 🎥 **Movie Browsing** – Explore a wide range of movies in a Netflix-like interface
-- 🤖 **AI-Powered Recommendations** – Get personalized suggestions powered by GPT
-- ▶️ **Trailer Playback** – Watch movie trailers directly in the app
-- 🎯 **Personalized Suggestions** – Curated results based on your search prompts
+- 🔐 **User Authentication** – Seamless sign-in and sign-up functionality powered by Firebase Auth.
+- 🎥 **Movie Browsing** – Explore extensive movie collections, including Now Playing, Popular, Top Rated, and Upcoming, all fetched from the TMDB API.
+- 🤖 **Intelligent GPT Search** – Instead of a simple title search, describe what you want to watch and let Gemini suggest relevant films.
+- ▶️ **Trailer Playback** – Watch movie trailers directly in the app.
+- 🎯 **Fully Responsive** – A beautiful and consistent user experience across desktop, tablet, and mobile devices.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Redux Toolkit, Tailwind CSS
-- **Authentication:** Firebase Auth
-- **AI Integration:** OpenAI GPT API
-- **Movie Data:** TMDB API
-- **Deployment:** Vercel / Netlify
-
----
-
-## 📸 Screenshots
-
-_to be added_
+- **Frontend:** React.js, Redux Toolkit, React Router, Tailwind CSS
+- **Backend & Services:** Firebase (Authentication), Google Gemini API (AI Search), TMDB API (Movie Data)
 
 ---
 
@@ -53,12 +44,18 @@ cd cineplex-GPT
    ```
 
 4. **Add environment variables**  
-   Create a `.env` file in the root and add your keys:
+    Create a `.env` file in the root and add your keys:
 
    ```bash
-    VITE_OPENAI_API_KEY=your_openai_api_key
-    VITE_FIREBASE_API_KEY=your_firebase_key
-    VITE_TMDB_API_KEY=your_tmdb_api_key
+    VITE_GEMINI_KEY="your_google_gemini_api_key"
+    VITE_TMDB_KEY="your_tmdb_api_key"
+
+    VITE_FIREBASE_KEY="your_firebase_api_key"
+    VITE_FIREBASE_AUTH_DOMAIN="your-project.firebaseapp.com"
+    VITE_FIREBASE_PROJECT_ID="your-project-id"
+    VITE_FIREBASE_STORAGE_BUCKET="your-project.appspot.com"
+    VITE_FIREBASE_MESSAGING_SENDER_ID="your-sender-id"
+    VITE_FIREBASE_APP_ID="your-app-id"
    ```
 
 5. **Run the app**

@@ -31,7 +31,6 @@ const MovieDetailModal = () => {
       onClick={handleOverlayClick}
     >
       <div className="bg-black w-full max-w-2xl rounded-lg overflow-hidden relative animate-fade-in-up shadow-lg">
-        {/* Close button */}
         <button
           onClick={handleClose}
           className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-75 transition cursor-pointer"
@@ -39,7 +38,6 @@ const MovieDetailModal = () => {
           X
         </button>
 
-        {/* Video Section */}
         <div className="w-full h-64 sm:h-96">
           {trailerKey ? (
             <iframe
@@ -65,7 +63,6 @@ const MovieDetailModal = () => {
           )}
         </div>
 
-        {/* Movie Info */}
         <div className="p-6 text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             {original_title}

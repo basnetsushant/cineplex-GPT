@@ -7,7 +7,7 @@ const ShimmerList = () => {
           {Array.from({ length: 10 }).map((_, idx) => (
             <div
               key={idx}
-              className="md:w-36 w-32 h-48 bg-gray-600 rounded-lg animate-pulse" // Darker gray for Netflix theme
+              className="md:w-36 w-32 h-48 bg-gray-600 rounded-lg animate-pulse"
             />
           ))}
         </div>
