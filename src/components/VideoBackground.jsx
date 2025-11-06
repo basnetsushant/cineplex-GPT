@@ -19,7 +19,6 @@ const VideoBackground = ({ movieId }) => {
         referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
 
-      {/* Optional dark overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black"></div>
     </div>
   );

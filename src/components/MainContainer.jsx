@@ -10,9 +10,8 @@ const MainContainer = () => {
   const { original_title, overview, id } = mainMovie;
 
   return (
-    <div className="relative w-full h-[90vh]">
+    <div className="relative w-full  h-[60vh] sm:h-[90vh]">
       {" "}
-      {/* slightly less than full screen */}
       <VideoBackground movieId={id} />
       <VideoTitle
         title={original_title}

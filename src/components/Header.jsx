@@ -52,15 +52,13 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   };
   return (
-    <div className="absolute w-full flex items-center justify-between px-8 py-4 bg-gradient-to-b from-black z-10">
+    <div className="absolute w-full flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-4 bg-gradient-to-b from-black z-10">
       <img
-        className="w-36 cursor-pointer"
+        className="w-28 sm:w-36 cursor-pointer mb-2 sm:mb-0"
         src={LOGO}
         alt="Netflix Logo"
         onClick={() => {
-          if (showGptSearch) {
-            dispatch(toggleGPTSearchView());
-          }
+          if (showGptSearch) dispatch(toggleGPTSearchView());
           navigate("/browse");
         }}
       />

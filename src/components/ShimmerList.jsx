@@ -1,4 +1,3 @@
-// components/ShimmerList.jsx
 const ShimmerList = () => {
   return (
     <div className="md:pl-6 px-2 text-white">
