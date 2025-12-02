@@ -1,4 +1,4 @@
-import GPTSearchBar from "./GPTSearchBar";
+import GPTSearchBar from "./GPTsearchBar";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
 
 const GPTSearch = () => {
